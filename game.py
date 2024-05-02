@@ -73,3 +73,4 @@ class Game:
         sound = pygame.mixer.Sound('win.wav')
         sound.play()
         sleep(3)
+        

@@ -33,3 +33,4 @@ class Solver:
         for piece in neighbors:
             if not piece.getFlagged():
                 self.board.handleClick(piece, True)
+                
