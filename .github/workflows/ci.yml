@@ -28,6 +28,7 @@ jobs:
       run: |
         sudo Xvfb :99 -ac &
         export DISPLAY=:99
+        sleep 3  # Wait for xvfb to start
         pytest
 
     - name: Lint with flake8
