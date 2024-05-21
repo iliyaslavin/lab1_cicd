@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +29,8 @@ jobs:
         export DISPLAY=:99
         sleep 3  # Wait for xvfb to start
         pytest
+      env:
+        DISPLAY: :99
 
     - name: Lint with flake8
       run: |
