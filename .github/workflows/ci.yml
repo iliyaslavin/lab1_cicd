@@ -20,14 +20,30 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install xvfb
+    - name: Install xvfb and other dependencies
       run: sudo apt-get install -y xvfb
 
-    - name: Run tests with xvfb
+    - name: Start Xvfb and set DISPLAY
       run: |
-        sudo Xvfb :99 -ac &
+        Xvfb :99 -ac &
         export DISPLAY=:99
-        sleep 3  # Wait for xvfb to start
+        echo "Xvfb started and DISPLAY is set to $DISPLAY"
+        sleep 5  # Wait for Xvfb to start
+
+    - name: Verify Xvfb is running
+      run: |
+        if pgrep Xvfb; then
+          echo "Xvfb is running"
+        else
+          echo "Xvfb is not running"
+          exit 1
+        fi
+      env:
+        DISPLAY: :99
+
+    - name: Run tests with pytest
+      run: |
+        export DISPLAY=:99
         pytest
       env:
         DISPLAY: :99
