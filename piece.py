@@ -4,6 +4,7 @@ class Piece:
         self.hasBomb = hasBomb
         self.clicked = False
         self.flagged = False
+        self.neighbors = []
 
     def getHasBomb(self):
         return self.hasBomb
@@ -19,3 +20,9 @@ class Piece:
 
     def flag(self):
         self.flagged = not self.flagged
+
+    def setNeighbors(self, neighbors):
+        self.neighbors = neighbors
+
+    def getNeighbors(self):
+        return self.neighbors
