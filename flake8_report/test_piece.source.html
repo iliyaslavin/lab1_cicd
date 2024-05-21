@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>test_piece.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <h1>
+            <a href="test_piece.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               test_piece.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="c1"># test_piece.py</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> &nbsp;</tt>
+            </div>
+            <div id="l3"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F401
+                     </span>
+                     'pytest' imported but unused</li>
+               
+               </ul><tt><i>3</i> <span class="kn">import</span> <span class="nn">pytest</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">from</span> <span class="nn">piece</span> <span class="kn">import</span> <span class="n">Piece</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>6</i> <span class="k">def</span> <span class="nf">test_piece_initialization</span><span class="p">():</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i>     <span class="n">piece</span> <span class="o">=</span> <span class="n">Piece</span><span class="p">(</span><span class="n">hasBomb</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to True should be 'if cond is True:' or 'if cond:'</li>
+               
+               </ul><tt><i>8</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getHasBomb</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to False should be 'if cond is False:' or 'if not cond:'</li>
+               
+               </ul><tt><i>9</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getClicked</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to False should be 'if cond is False:' or 'if not cond:'</li>
+               
+               </ul><tt><i>10</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getFlagged</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> &nbsp;</tt>
+            </div>
+            <div id="l12"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>12</i> <span class="k">def</span> <span class="nf">test_piece_click</span><span class="p">():</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i>     <span class="n">piece</span> <span class="o">=</span> <span class="n">Piece</span><span class="p">(</span><span class="n">hasBomb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i>     <span class="n">piece</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to True should be 'if cond is True:' or 'if cond:'</li>
+               
+               </ul><tt><i>15</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getClicked</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> &nbsp;</tt>
+            </div>
+            <div id="l17"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>17</i> <span class="k">def</span> <span class="nf">test_piece_flag</span><span class="p">():</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i>     <span class="n">piece</span> <span class="o">=</span> <span class="n">Piece</span><span class="p">(</span><span class="n">hasBomb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i>     <span class="n">piece</span><span class="o">.</span><span class="n">flag</span><span class="p">()</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to True should be 'if cond is True:' or 'if cond:'</li>
+               
+               </ul><tt><i>20</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getFlagged</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i>     <span class="n">piece</span><span class="o">.</span><span class="n">flag</span><span class="p">()</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E712
+                     </span>
+                     Comparison to False should be 'if cond is False:' or 'if not cond:'</li>
+               
+               </ul><tt><i>22</i>     <span class="k">assert</span> <span class="n">piece</span><span class="o">.</span><span class="n">getFlagged</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>
